@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Interior Design Portfolio - Elegant Design System
+All colors MUST be HSL. Sophisticated white & ash gray palette.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --surface: 0 0% 98%;
+    --surface-secondary: 0 0% 95%;
+    
+    /* Popover Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    
+    /* Ash Gray & Light Color Palette */
+    --ash-light: 0 0% 90%;
+    --ash-medium: 0 0% 75%;
+    --ash-dark: 0 0% 45%;
+    --pearl: 45 20% 95%;
+    --cream: 30 25% 96%;
+    --soft-white: 0 0% 98%;
+    --warm-light: 35 15% 94%;
+    --cool-light: 200 15% 95%;
+    --ivory: 50 25% 97%;
+    --mint-light: 120 15% 95%;
+    --lavender-light: 260 20% 96%;
+    
+    /* Accent Colors */
+    --accent-warm: 30 8% 92%;
+    --accent-cool: 210 8% 92%;
+    
+    /* Interactive States */
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 0 0% 30%;
+    
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 20%;
+    --secondary-hover: 0 0% 90%;
+    
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 0 0% 92%;
+    --accent-foreground: 0 0% 20%;
+    
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 92%;
+    --ring: 0 0% 20%;
+    
+    /* Design System */
+    --radius: 0.75rem;
+    
+    /* Enhanced Gradients */
+    --gradient-elegant: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 100%);
+    --gradient-ash: linear-gradient(180deg, hsl(0 0% 95%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-pearl: linear-gradient(135deg, hsl(45 20% 95%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-cream: linear-gradient(135deg, hsl(30 25% 96%) 0%, hsl(45 20% 95%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(35 15% 94%) 0%, hsl(30 25% 96%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(200 15% 95%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(0 0% 0% / 0.3) 0%, hsla(0 0% 0% / 0) 100%);
+    
+    /* Shadows */
+    --shadow-subtle: 0 1px 3px hsla(0 0% 0% / 0.05);
+    --shadow-medium: 0 4px 12px hsla(0 0% 0% / 0.08);
+    --shadow-large: 0 12px 24px hsla(0 0% 0% / 0.12);
+    --shadow-elegant: 0 8px 32px hsla(0 0% 0% / 0.06);
+    
+    /* Typography Scale */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    
+    /* Spacing System */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease-out;
+    --transition-smooth: 0.3s ease-out;
+    --transition-slow: 0.5s ease-out;
+    --transition-elegant: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark mode - elegant ash palette */
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --surface: 0 0% 12%;
+    --surface-secondary: 0 0% 15%;
+    
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    --ash-light: 0 0% 25%;
+    --ash-medium: 0 0% 40%;
+    --ash-dark: 0 0% 60%;
+    
+    --accent-warm: 30 8% 15%;
+    --accent-cool: 210 8% 15%;
+    
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 8%;
+    --primary-hover: 0 0% 85%;
+    
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-hover: 0 0% 20%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 95%;
+    
+    --gradient-elegant: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    --gradient-ash: linear-gradient(180deg, hsl(0 0% 12%) 0%, hsl(0 0% 8%) 100%);
+    
+    --shadow-subtle: 0 1px 3px hsla(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 12px hsla(0 0% 0% / 0.4);
+    --shadow-large: 0 12px 24px hsla(0 0% 0% / 0.5);
+    --shadow-elegant: 0 8px 32px hsla(0 0% 0% / 0.4);
+  }
+}
+
+/* Import elegant fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+  /* Enhanced Utility Classes */
+  .bg-gradient-ash {
+    background: var(--gradient-ash);
+  }
+  
+  .bg-gradient-pearl {
+    background: var(--gradient-pearl);
+  }
+  
+  .bg-gradient-cream {
+    background: var(--gradient-cream);
+  }
+  
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .bg-gradient-cool {
+    background: var(--gradient-cool);
+  }
+  
+  .text-pearl {
+    color: hsl(var(--pearl));
+  }
+  
+  .text-cream {
+    color: hsl(var(--cream));
+  }
+  
+  .bg-pearl {
+    background-color: hsl(var(--pearl));
+  }
+  
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+  
+  .bg-ivory {
+    background-color: hsl(var(--ivory));
+  }
+  
+  .bg-mint-light {
+    background-color: hsl(var(--mint-light));
+  }
+  
+  .bg-lavender-light {
+    background-color: hsl(var(--lavender-light));
+  }
+  .fade-in-up {
+    animation: fadeInUp var(--transition-smooth) ease-out forwards;
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  
+  .fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .parallax {
+    transform: translateY(var(--parallax-y, 0));
+    transition: transform var(--transition-smooth);
+  }
+  
+  .hover-lift {
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  /* Image Hover Effects */
+  .image-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsla(0 0% 0% / 0) 0%, hsla(0 0% 0% / 0.3) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+  }
+  
+  .image-overlay:hover::after {
+    opacity: 1;
+  }
+  
+  .image-overlay img {
+    transition: transform var(--transition-slow);
+  }
+  
+  .image-overlay:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Typography */
+  .text-elegant {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}

@@ -1,0 +1,200 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Mobile Portfolio Fixes */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .image-overlay {
+    position: relative;
+  }
+  
+  /* Ensure images display properly on mobile */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix for portfolio grid on mobile */
+  .grid {
+    width: 100%;
+    display: grid;
+  }
+  
+  /* Force portfolio section to display */
+  #portfolio {
+    display: block !important;
+    visibility: visible !important;
+    background-color: #f9fafb !important;
+    min-height: auto !important;
+  }
+  
+  /* Remove problematic gradient backgrounds on mobile */
+  .bg-gradient-light,
+  .bg-gradient-ash,
+  .bg-gradient-cream,
+  .bg-gradient-pearl,
+  .bg-gradient-warm,
+  .bg-gradient-cool,
+  .bg-ivory,
+  .bg-mint-light,
+  .bg-lavender-light {
+    background: #f9fafb !important;
+    background-image: none !important;
+  }
+}
+
+/* Additional mobile fixes */
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .container-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* WhatsApp button mobile positioning */
+  .fixed.bottom-6.right-6 {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  /* Ensure portfolio items are visible */
+  .group {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Force portfolio images to show */
+  .group img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* WhatsApp button hover effects */
+.bg-green-500:hover {
+  background-color: #16a34a;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+/* Ensure WhatsApp button stays above other elements */
+.z-50 {
+  z-index: 50;
+}
+
+/* Force visibility for portfolio section */
+.portfolio-visible {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure portfolio loads automatically */
+#portfolio {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Auto-display portfolio items */
+#portfolio .group,
+#portfolio .grid > div {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Portfolio section auto-load animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-auto-load {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Mobile Portfolio Auto-Load Fixes */
+@media (max-width: 768px) {
+  /* ...existing mobile code... */
+  
+  /* Ensure portfolio auto-loads on mobile */
+  #portfolio {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #f9fafb !important;
+    min-height: auto !important;
+  }
+  
+  /* Auto-show portfolio items on mobile */
+  #portfolio .group,
+  #portfolio .grid > div,
+  #portfolio img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
